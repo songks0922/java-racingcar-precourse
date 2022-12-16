@@ -1,1 +1,1 @@
-package racingcar.view;public class OutputView {    public void printError(String message) {        System.out.println(message);    }}
+package racingcar.view;public class OutputView {    private static final String RESULT_MESSAGE = "실행 결과";    public void printError(String message) {        System.out.println(message);    }    public void printResultMessage() {        System.out.println(RESULT_MESSAGE);    }    public void printEachResult(String eachResult) {        System.out.println(eachResult);    }}
