@@ -1,5 +1,7 @@
 package racingcar.domain;
 
+import racingcar.exception.ExceptionMessage;
+
 public class Car {
 
     private static final String path = "-";
@@ -7,6 +9,7 @@ public class Car {
     private int position = 0;
 
     public Car(String name) {
+        validateNameLength(name);
         this.name = name;
     }
 
@@ -38,6 +41,11 @@ public class Car {
         return false;
     }
 
+    public void validateNameLength(String name) {
+        if (name.length() > 5) {
+            throw new IllegalArgumentException(ExceptionMessage.INPUT_CAR_NAME_ERROR.getErrorMessage());
+        }
+    }
     @Override
     public String toString() {
         String fullPath = "";
