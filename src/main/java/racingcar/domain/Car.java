@@ -8,14 +8,13 @@ public class Car {
         this.name = name;
     }
 
-    public void forward() {
-        if (canForward()) {
+    public void forward(int number) {
+        if (canForward(number)) {
             position++;
         }
     }
 
-    private boolean canForward() {
-        int number = ForwardGenerator.generateNumber();
+    private boolean canForward(int number) {
         if (number >= 4) {
             return true;
         }
