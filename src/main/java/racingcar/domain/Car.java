@@ -7,4 +7,12 @@ public class Car {
     public Car(String name) {
         this.name = name;
     }
+
+    private boolean canForward() {
+        int number = ForwardGenerator.generateNumber();
+        if (number >= 4) {
+            return true;
+        }
+        return false;
+    }
 }
