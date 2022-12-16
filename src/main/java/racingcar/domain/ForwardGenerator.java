@@ -1,0 +1,1 @@
+package racingcar.domain;import camp.nextstep.edu.missionutils.Randoms;public class ForwardGenerator {    private final static int NUMBER_DOWN_BOUND = 0;    private final static int NUMBER_UP_BOUND = 9;    public static int generateNumber() {        int randomNumber = Randoms.pickNumberInRange(NUMBER_DOWN_BOUND, NUMBER_UP_BOUND);        return randomNumber;    }}
