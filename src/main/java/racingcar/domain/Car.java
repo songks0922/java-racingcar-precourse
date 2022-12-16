@@ -26,7 +26,7 @@ public class Car {
     @Override
     public String toString() {
         String fullPath = "";
-        for (int i = 0; i <= position; i++) {
+        for (int i = 0; i < position; i++) {
             fullPath += path;
         }
         return fullPath;
