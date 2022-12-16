@@ -23,6 +23,21 @@ public class Car {
         return false;
     }
 
+    public int getPosition() {
+        return position;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isWinner(int position) {
+        if (this.position == position) {
+            return true;
+        }
+        return false;
+    }
+
     @Override
     public String toString() {
         String fullPath = "";
