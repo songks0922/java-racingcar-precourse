@@ -1,6 +1,8 @@
 package racingcar.domain;
 
 public class Car {
+
+    private static final String path = "-";
     private final String name;
     private int position = 0;
 
@@ -19,5 +21,14 @@ public class Car {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        String fullPath = "";
+        for (int i = 0; i <= position; i++) {
+            fullPath += path;
+        }
+        return fullPath;
     }
 }
