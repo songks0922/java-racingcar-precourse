@@ -1,0 +1,1 @@
+package racingcar.domain;import org.assertj.core.api.Assertions;import org.junit.jupiter.api.DisplayName;import org.junit.jupiter.api.Test;class CarTest {    @Test    @DisplayName("자동차 전진 테스트")    void forwardTest() {        Car car = new Car("pobi");        car.forward(6);        Assertions.assertThat(car).extracting("position")            .isEqualTo(1);    }}
