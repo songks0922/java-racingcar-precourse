@@ -1,0 +1,1 @@
+package racingcar.domain;import org.assertj.core.api.Assertions;import org.junit.jupiter.api.DisplayName;import org.junit.jupiter.api.Test;class ForwardGeneratorTest {    @Test    @DisplayName("랜덤 숫자 생성 테스트 범위 0~9")    void generateNumberTest() {        int random = ForwardGenerator.generateNumber();        Assertions.assertThat(random).isBetween(0, 9);    }}
